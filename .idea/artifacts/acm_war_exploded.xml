@@ -13,6 +13,8 @@
           <element id="library" level="application" name="com.mchange:c3p0:0.9.5.2" />
           <element id="library" level="application" name="mysql-connector-java-5.1.42-bin" />
           <element id="library" level="application" name="commons-dbutils-1.6" />
+          <element id="library" level="application" name="commons-io:commons-io:2.5" />
+          <element id="library" level="application" name="commons-collections:commons-collections:3.2.2" />
         </element>
       </element>
     </root>

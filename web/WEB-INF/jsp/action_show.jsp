@@ -13,6 +13,8 @@
 <%@ include file="header.jsp" %>
 <body>
 <hr>
+<a href="${pageContext.request.contextPath}/welcome"><input type="button" value="返回首页"></a>
+<hr>
 <table border="1" align="center">
     <tr>
         <td width="80px">事件id</td>

@@ -25,7 +25,7 @@ public class ActionDAO {
     }
 
     public List<Action> getAllActions() throws SQLException {
-        String sql = "SELECT * FROM actions";
+        String sql = "SELECT * FROM actions ORDER BY aid DESC ";
         List<Action> actions = queryRunner.query(sql, new BeanListHandler<>(Action.class));
         return actions;
     }

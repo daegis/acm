@@ -1,3 +1,4 @@
+<jsp:useBean id="action" scope="request" type="red.sif.beans.Action"/>
 <%--
   Created by IntelliJ IDEA.
   User: XIAN. Yingda
@@ -33,7 +34,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <hr>
-事件详情页面
+事件详情页面<a href="${pageContext.request.contextPath}/action_show"><input type="button" value="返回事件首页"></a>
 <hr>
 <form id="formid">
     <table>

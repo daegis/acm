@@ -18,6 +18,8 @@
 事件管理<br>
 <a href="${pageContext.request.contextPath}/action_add">添加一个事件</a><br>
 <a href="${pageContext.request.contextPath}/action_show">查看所有事件</a><br>
+<hr>
+<a href="${pageContext.request.contextPath}/client_add">添加一个人员</a><br>
 
 </body>
 </html>
