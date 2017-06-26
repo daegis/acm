@@ -2,6 +2,7 @@ package red.sif.dao;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import red.sif.beans.Action;
 import red.sif.utils.DatabaseUtil;
 
@@ -43,5 +44,11 @@ public class ActionDAO {
                 action.getAprice(), action.getAcost(), action.getAid()
         };
         queryRunner.update(sql, arr);
+    }
+
+    public int getActionPrice(String joint) throws SQLException {
+        String sql = "SELECT aprice FROM actions WHERE aid=?";
+        int query = queryRunner.query(sql, new ScalarHandler<>(), joint);
+        return query;
     }
 }

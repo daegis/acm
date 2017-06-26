@@ -75,6 +75,45 @@
         </tr>
     </table>
 </form>
-
+<hr>
+<div style="text-align: center">参与人员</div>
+<table border="1" align="center">
+    <tr>
+        <td>活动序号</td>
+        <td>cid</td>
+        <td>昵称</td>
+        <td>姓名</td>
+        <td>电话</td>
+        <td>身份证号</td>
+        <td>所在地</td>
+        <td>年龄</td>
+        <td>性别</td>
+        <td>报名时间</td>
+        <td>价格</td>
+        <td>折扣</td>
+        <td>预付</td>
+        <td>缴费方式</td>
+        <td>人员状态</td>
+    </tr>
+    <c:forEach items="${clients}" var="client">
+        <tr>
+            <td>${client.acorder}</td>
+            <td>${client.cid}</td>
+            <td>${client.cnickname}</td>
+            <td>${client.cname}</td>
+            <td>${client.cphone}</td>
+            <td>${client.cidnum}</td>
+            <td>${client.clocation}</td>
+            <td>${client.cage}</td>
+            <td>${client.cgender}</td>
+            <td>${client.acdate}</td>
+            <td>${client.acprice}</td>
+            <td>${client.acdiscount}</td>
+            <td>${client.acprecharge}</td>
+            <td>${client.acpremethod}</td>
+            <td>${client.acisready}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

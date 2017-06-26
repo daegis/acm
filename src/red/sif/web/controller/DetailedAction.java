@@ -1,6 +1,9 @@
 package red.sif.web.controller;
 
 import red.sif.beans.Action;
+import red.sif.beans.ActionClient;
+import red.sif.beans.Client;
+import red.sif.service.ACService;
 import red.sif.service.ActionService;
 
 import javax.servlet.ServletException;
@@ -10,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by XIAN. Yingda on 2017/6/25 23:35.
@@ -32,6 +36,15 @@ public class DetailedAction extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/jsp/error.jsp");
         }
         request.setAttribute("action", action);
+        ACService acService = new ACService();
+        List<ActionClient> actionClientList = null;
+        try {
+            actionClientList = acService.getActionClient(aid);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("clients", actionClientList);
+        System.out.println(actionClientList);
         request.getRequestDispatcher("/WEB-INF/jsp/action_detail.jsp").forward(request, response);
     }
 }

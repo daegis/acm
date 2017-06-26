@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * Created by XIAN. Yingda on 2017/6/25 22:33.
  */
+@SuppressWarnings("Duplicates")
 @WebServlet(name = "showAction", urlPatterns = "/showAction")
 public class showAction extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

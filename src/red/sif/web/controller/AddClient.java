@@ -47,6 +47,13 @@ public class AddClient extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/jsp/error.jsp");
         }
         ACService acService = new ACService();
-        acService.addJoin(addedClientKey,joints);
+        try {
+            acService.addJoin(addedClientKey, joints);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            request.setAttribute("errorMessage", "遇到数据库问题,请联系管理员");
+            request.getRequestDispatcher("/WEB-INF/jsp/error.jsp");
+        }
+        response.sendRedirect(request.getContextPath() + "/welcome");
     }
 }
