@@ -44,7 +44,6 @@ public class DetailedAction extends HttpServlet {
             e.printStackTrace();
         }
         request.setAttribute("clients", actionClientList);
-        System.out.println(actionClientList);
         request.getRequestDispatcher("/WEB-INF/jsp/action_detail.jsp").forward(request, response);
     }
 }
