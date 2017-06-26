@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="acm:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/acm_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="acm/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="acm" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="jstl" />
+          <element id="library" level="application" name="commons-beanutils-1.9.3" />
+          <element id="library" level="application" name="com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="application" name="mysql-connector-java-5.1.42-bin" />
+          <element id="library" level="application" name="commons-dbutils-1.6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

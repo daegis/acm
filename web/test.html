@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                var $form = $("#form");
+                if (v1 && v2) {
+                    $form.submit();
+                } else {
+                    alert("有东西不对的老哥");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<form id="form" action="http://www.baidu.com" method="post">
+    <input>
+    <input>
+    <input type="button" id="btn" value="submit">
+</form>
+</body>
+</html>
