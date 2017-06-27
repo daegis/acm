@@ -61,6 +61,8 @@ public class ACService {
 
     public void doClientUpdate(ClientUpdateBean clientUpdateBean) throws SQLException {
         // 调用Rosemary补充要自动生成的信息,可能访问数据库
+        Rosemary rosemary = new Rosemary();
+        rosemary.additionalInformation(clientUpdateBean);
         // 将这个更新后的人分别提交 acjoin表和 clients表
         ClientDAO clientDAO = new ClientDAO();
         clientDAO.doClientUpdate(clientUpdateBean);

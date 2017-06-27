@@ -146,6 +146,7 @@
                 },
                 success: function (message) {
                     alert(message);
+                    window.location.reload();
                 }
             })
         })
