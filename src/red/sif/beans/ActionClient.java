@@ -12,6 +12,16 @@ public class ActionClient {
     private String clocation;
     private String cage;
     private String cgender;
+    private String cnote;
+
+    public String getCnote() {
+        return cnote;
+    }
+
+    public void setCnote(String cnote) {
+        this.cnote = cnote;
+    }
+
     private String acorder;
     private String acdate;
     private String acprice;
@@ -19,6 +29,15 @@ public class ActionClient {
     private String acprecharge;
     private String acpremethod;
     private String acisready;
+    private String acleft;
+
+    public String getAcleft() {
+        return Integer.parseInt(acprice) - Integer.parseInt(acdiscount) - Integer.parseInt(acprecharge) + "";
+    }
+
+    public void setAcleft(String acleft) {
+        this.acleft = acleft;
+    }
 
     @Override
     public String toString() {

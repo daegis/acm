@@ -27,5 +27,6 @@
     <orderEntry type="library" name="commons-dbutils-1.6" level="application" />
     <orderEntry type="library" name="commons-io:commons-io:2.5" level="application" />
     <orderEntry type="library" name="commons-collections:commons-collections:3.2.2" level="application" />
+    <orderEntry type="library" name="com.alibaba:fastjson:1.1.29" level="application" />
   </component>
 </module>

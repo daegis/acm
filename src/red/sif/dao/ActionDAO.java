@@ -51,4 +51,10 @@ public class ActionDAO {
         int query = queryRunner.query(sql, new ScalarHandler<>(), joint);
         return query;
     }
+
+    public int getPrice(String aid) throws SQLException {
+        String sql = "select aprice FROM actions where aid = ?";
+        int query = queryRunner.query(sql, new ScalarHandler<>(), aid);
+        return query;
+    }
 }

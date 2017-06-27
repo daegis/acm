@@ -7,8 +7,9 @@
     <script>
         $(function () {
             $("#btn").click(function () {
+                var v1 = true;
                 var $form = $("#form");
-                if (v1 && v2) {
+                if (v1) {
                     $form.submit();
                 } else {
                     alert("有东西不对的老哥");
